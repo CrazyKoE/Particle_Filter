@@ -1,0 +1,65 @@
+Use the PIL in python to deal with the pictures.
+Using the command
+ 		pip install pillow
+to install the pillow package.
+
+Class Robot:
+Generate the Robot model
+__init__: Randomly choose the initial location and the initial orientation
+set_robot: Put the robot in position and judge if the location is in the range
+set_moise: Add the Gaussian Noise to the move of the robot
+move: In charge of the movement of the robot.
+
+DrawingtheCircle: 
+"""
+Input: the coordinate of the center of the robot.
+Output: the image of the robot camera, the radius is 50.
+"""
+
+There are two methods in comparing the pictures:
+#Method 1.
+Calculate the histogram of the pictures 
+pictureCompare:
+"""
+Input: center: the robot coordinate
+       x: the x-coordinate of the particles
+       y: the y-coordinate of the particles
+Output: the result of the comparing
+"""
+
+#Method 2.
+Compare the average pixel value feature of the pictures:
+hashImg:
+"""
+Input : the image
+Output: the feature sequence of the pictures
+"""
+
+similar:
+"""
+Input: two pictures waiting to be compared
+Output: the percentage of the similarity
+"""
+
+weightCal:
+"""
+Input: center: the robot coordinate
+       x: the x-coordinate of the particles
+       y: the y-coordinate of the particles
+Output: the weight
+"""
+
+predict:
+"""
+Input: particle: the set of the particles
+       u: the orientation and velocity --- 1*2 np.array
+       std: the noise --- 1*2 np.array
+Output: the set of particles after the movement
+"""
+
+particleResample:
+"""
+Input: particle: the set of the particles
+       weight: the weights of the particles
+Output: the set of particles after the resampling
+"""
